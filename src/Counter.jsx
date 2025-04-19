@@ -1,15 +1,25 @@
 import { useState } from "react";
-import { useEffect } from "react";
 
-let name = "Fernando";
-let newMessage = {
+const dataProfessor = {
   name: "Fernando",
-  titlw: "Profesor",
+  title: "Profesor",
 };
+
+const getName = (name, title) => {
+  return `el nombre es ${name} y el cargo es ${title}`;
+};
+
 export const Counter = () => {
+  const [message, setMessage] = useState("");
+
+  const newMessage = () => getName(dataProfessor.name, dataProfessor.title);
+
   return (
     <>
-      <h2 className="subtitle">{JSON.stringify(newMessage)}</h2>
+      <button className="button" onClick={() => setMessage(newMessage())}>
+        Presiona
+      </button>
+      <h2 className="subtitle">{message}</h2>
     </>
   );
 };
