@@ -6,3 +6,24 @@ body {
   font-size: 1.3rem;
   padding: 70px;
 }
+
+button {
+  padding: 5px 26px;
+  font-size: 1.3rem;
+  margin: 0 2rem 0 2rem;
+  border-radius: 10%;
+  background-color: aqua;
+}
+
+button:active {
+  outline: none;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
